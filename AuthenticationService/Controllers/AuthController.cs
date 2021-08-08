@@ -30,7 +30,7 @@ namespace AuthenticationService.Controllers
         // POST api/<controller>
         [HttpPost]
         [Route("register")]
-        public IActionResult Register([FromBody]User user)
+        public IActionResult Register([FromBody] User user)
         {
             bool result = false;
             try
@@ -47,7 +47,7 @@ namespace AuthenticationService.Controllers
 
         [HttpPost]
         [Route("login")]
-        public IActionResult Login([FromBody]User user)
+        public IActionResult Login([FromBody] LoginDTO user)
         {
             User result;
             try
@@ -68,7 +68,7 @@ namespace AuthenticationService.Controllers
 
         [HttpPost]
         [Route("validate")]
-        public IActionResult Validate([FromBody]AuthToken token)
+        public IActionResult Validate([FromBody] AuthToken token)
         {
             var result = tokenValidator.ValidateToken(token);
             return Ok(result);

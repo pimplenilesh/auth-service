@@ -21,12 +21,6 @@ namespace AuthenticationService.Controllers
             this.tokenValidator = _tokenValidator;
         }
 
-        [HttpGet]
-        public IActionResult Get()
-        {
-            return Ok("Action Executed");
-        }
-
         // POST api/<controller>
         [HttpPost]
         [Route("register")]

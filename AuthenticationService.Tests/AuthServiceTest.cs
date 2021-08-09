@@ -66,6 +66,5 @@ namespace AuthenticationService.Test
             var actual = Assert.Throws<UserNotFoundException>(() => service.LoginUser(userId,password));
             Assert.Equal($"User with this id {userId} and password {password} does not exist", actual.Message);
         }
-
     }
 }

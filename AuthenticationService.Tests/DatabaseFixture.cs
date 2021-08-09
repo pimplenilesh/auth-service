@@ -18,7 +18,7 @@ namespace AuthenticationService.Test
             context = new AuthenticationContext(options);
 
             // Insert seed data into the database using one instance of the context
-            context.Users.Add(new User { UserId="admin",Password="admin123", FirstName="Mukesh", LastName="Goel", Role="admin", AddedDate=new DateTime()  });
+            context.Users.Add(new User { UserId="admin",Password="admin123", FirstName="Nilesh", LastName="Pimple", Role="admin", AddedDate=new DateTime()  });
             context.SaveChanges();
         }
         public void Dispose()
